@@ -1,0 +1,258 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Virtual Secret Santa
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-100 font-roboto">
+  <header class="bg-red-600 text-white p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+     <img alt="Santa Claus icon" class="h-10 w-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/KeRDBnrp7enC2kmAVuko4SQXVsuIDeoNpfT4YidJwpyTnawPB.jpg" width="40"/>
+     <h1 class="text-2xl font-bold">
+      Secret Santa
+     </h1>
+    </div>
+    <nav>
+     <ul class="hidden md:flex space-x-4">
+      <li>
+       <a class="hover:underline" href="#">
+        Home
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        About
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#features">
+        Features
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline" href="#">
+        Contact
+       </a>
+      </li>
+     </ul>
+     <div class="md:hidden">
+      <button class="text-white focus:outline-none" id="menu-button">
+       <i class="fas fa-bars text-2xl">
+       </i>
+      </button>
+     </div>
+    </nav>
+   </div>
+   <div class="hidden md:hidden" id="mobile-menu">
+    <ul class="flex flex-col space-y-2 mt-2">
+     <li>
+      <a class="hover:underline" href="#">
+       Home
+      </a>
+     </li>
+     <li>
+      <a class="hover:underline" href="#">
+       About
+      </a>
+     </li>
+     <li>
+      <a class="hover:underline" href="#features">
+       Features
+      </a>
+     </li>
+     <li>
+      <a class="hover:underline" href="#">
+       Contact
+      </a>
+     </li>
+    </ul>
+   </div>
+  </header>
+  <main class="container mx-auto p-4">
+   <section class="text-center my-8">
+    <h2 class="text-3xl font-bold mb-4">
+     Join the Fun of Secret Santa!
+    </h2>
+    <p class="text-lg mb-6">
+     Organize and participate in gift exchanges online, even if you are miles apart.
+    </p>
+    <a class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700" href="#">
+     Get Started
+    </a>
+   </section>
+   <section class="my-8" id="features">
+    <h3 class="text-2xl font-bold mb-4">
+     Features
+    </h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+     <div class="bg-white p-4 rounded shadow">
+      <i class="fas fa-user-plus text-red-600 text-3xl mb-2">
+      </i>
+      <h4 class="text-xl font-bold mb-2">
+       User Registration
+      </h4>
+      <p>
+       Sign up with your email or social media accounts and create a profile with your wishlist and preferences.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <i class="fas fa-random text-red-600 text-3xl mb-2">
+      </i>
+      <h4 class="text-xl font-bold mb-2">
+       Secret Santa Matchmaking
+      </h4>
+      <p>
+       The system randomly assigns participants to each other while keeping assignments secret.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <i class="fas fa-gift text-red-600 text-3xl mb-2">
+      </i>
+      <h4 class="text-xl font-bold mb-2">
+       Wishlist Sharing
+      </h4>
+      <p>
+       Add gift ideas or preferences to your profile and allow for anonymous questions.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <i class="fas fa-envelope-open-text text-red-600 text-3xl mb-2">
+      </i>
+      <h4 class="text-xl font-bold mb-2">
+       Gift Exchange
+      </h4>
+      <p>
+       Send virtual gifts like e-cards or online gift vouchers and mark the gift as sent or received.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <i class="fas fa-comments text-red-600 text-3xl mb-2">
+      </i>
+      <h4 class="text-xl font-bold mb-2">
+       Chat Feature
+      </h4>
+      <p>
+       Anonymous chat between the gift sender and recipient for hints or questions.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <i class="fas fa-clock text-red-600 text-3xl mb-2">
+      </i>
+      <h4 class="text-xl font-bold mb-2">
+       Countdown Timer
+      </h4>
+      <p>
+       Show a countdown to the gift exchange date.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <i class="fas fa-users text-red-600 text-3xl mb-2">
+      </i>
+      <h4 class="text-xl font-bold mb-2">
+       Group Management
+      </h4>
+      <p>
+       Create and join private groups for Secret Santa with customizable rules, budget, and deadlines.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <i class="fas fa-share-alt text-red-600 text-3xl mb-2">
+      </i>
+      <h4 class="text-xl font-bold mb-2">
+       Social Sharing
+      </h4>
+      <p>
+       Share your Secret Santa participation on social media (optional).
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <i class="fas fa-mobile-alt text-red-600 text-3xl mb-2">
+      </i>
+      <h4 class="text-xl font-bold mb-2">
+       Responsive Design
+      </h4>
+      <p>
+       Optimized for both desktop and mobile users.
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="my-8">
+    <h3 class="text-2xl font-bold mb-4">
+     How It Works
+    </h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="User signing up on the website" class="mb-4 rounded" height="200" src="https://storage.googleapis.com/a1aa/image/lv2Oa9RxJoIVNh6CxJniliwLf0PV5Kq7ybmQrvI9eKqvpG8TA.jpg" width="300"/>
+      <h4 class="text-xl font-bold mb-2">
+       User Signup
+      </h4>
+      <p>
+       Users sign up and create a profile with details like their wishlist, budget range, and availability.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="Users joining or creating groups" class="mb-4 rounded" height="200" src="https://storage.googleapis.com/a1aa/image/QfyxfeNPdWFHxpp07YUVChnrNEvvy7Atfi8PKdvFhUBMnawPB.jpg" width="300"/>
+      <h4 class="text-xl font-bold mb-2">
+       Join/Create Groups
+      </h4>
+      <p>
+       Users can create or join groups (e.g., "Office Secret Santa 2024"). Set group rules, budget, and deadlines.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="System performing matchmaking" class="mb-4 rounded" height="200" src="https://storage.googleapis.com/a1aa/image/DTHqYOXaEcY5CtnuOofxZ1MsC4wzAVBoHf0Fn95SyqvxpG8TA.jpg" width="300"/>
+      <h4 class="text-xl font-bold mb-2">
+       Matchmaking
+      </h4>
+      <p>
+       Once everyone has joined, the admin triggers the "matchmaking" process. The system assigns a Secret Santa to each user, keeping it a secret.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="User sending a virtual gift" class="mb-4 rounded" height="200" src="https://storage.googleapis.com/a1aa/image/u5adTn4pSVo0BthEMa5K3LC944UEJabKTqEaPaVZLlUbqBfJA.jpg" width="300"/>
+      <h4 class="text-xl font-bold mb-2">
+       Gift Sharing
+      </h4>
+      <p>
+       Users can send e-gifts or notify when physical gifts are sent. Track gift status (e.g., sent, received).
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="Virtual event for gift opening" class="mb-4 rounded" height="200" src="https://storage.googleapis.com/a1aa/image/SpjgpPOUU6IKChfZPTAvK3DUlx28MRsQRo3Q0MgL9UP4UDeTA.jpg" width="300"/>
+      <h4 class="text-xl font-bold mb-2">
+       Event Day
+      </h4>
+      <p>
+       Virtual gift-opening experience, such as a shared Zoom link or a virtual event page.
+      </p>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-gray-800 text-white p-4">
+   <div class="container mx-auto text-center">
+    <p>
+     © 2024 Virtual Secret Santa. All rights reserved.
+    </p>
+   </div>
+  </footer>
+  <script>
+   document.getElementById('menu-button').addEventListener('click', function() {
+     var menu = document.getElementById('mobile-menu');
+     if (menu.classList.contains('hidden')) {
+       menu.classList.remove('hidden');
+     } else {
+       menu.classList.add('hidden');
+     }
+   });
+  </script>
+ </body>
+</html>

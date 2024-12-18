@@ -1,0 +1,124 @@
+<html lang="en">
+ <head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Contact Us
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-100 font-roboto">
+  <header class="bg-red-600 text-white p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+     <h1 class="text-3xl font-bold">
+      Contact Us
+     </h1>
+    </div>
+    <nav>
+     <ul class="hidden md:flex space-x-4">
+      <li>
+       <a class="hover:underline flex items-center space-x-1" href="index.html">
+        <i class="fas fa-home text-xl">
+        </i>
+        <span>
+         Home
+        </span>
+       </a>
+      </li>
+     </ul>
+     <div class="md:hidden">
+      <button class="text-white focus:outline-none" id="menu-button">
+       <i class="fas fa-bars text-2xl">
+       </i>
+      </button>
+     </div>
+    </nav>
+   </div>
+   <div class="hidden md:hidden" id="mobile-menu">
+    <ul class="flex flex-col space-y-2 mt-2">
+     <li>
+      <a class="hover:underline flex items-center space-x-1" href="index.html">
+       <i class="fas fa-home text-xl">
+       </i>
+       <span>
+        Home
+       </span>
+      </a>
+     </li>
+    </ul>
+   </div>
+  </header>
+  <main class="container mx-auto p-4">
+   <section class="bg-white p-6 rounded shadow my-8">
+    <h2 class="text-2xl font-bold mb-4">
+     We'd love to hear from you!
+    </h2>
+    <p class="mb-4">
+     If you have any questions, feedback, or just want to say hi, fill out the form below or email us at 
+     <a class="text-red-600 hover:underline" href="mailto:support@secretsanta.com">
+      support@secretsanta.com
+     </a>
+     .
+    </p>
+    <form class="space-y-4" id="contact-form">
+     <div>
+      <label class="block text-lg font-medium mb-2" for="name">
+       Your Name:
+      </label>
+      <input class="w-full p-2 border border-gray-300 rounded" id="name" name="name" placeholder="Enter your name" required="" type="text"/>
+     </div>
+     <div>
+      <label class="block text-lg font-medium mb-2" for="email">
+       Your Email:
+      </label>
+      <input class="w-full p-2 border border-gray-300 rounded" id="email" name="email" placeholder="Enter your email" required="" type="email"/>
+     </div>
+     <div>
+      <label class="block text-lg font-medium mb-2" for="message">
+       Your Message:
+      </label>
+      <textarea class="w-full p-2 border border-gray-300 rounded" id="message" name="message" placeholder="Write your message here..." required="" rows="5">
+      </textarea>
+     </div>
+     <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700" type="submit">
+      Send Message
+     </button>
+    </form>
+    <div class="mt-4" id="response">
+    </div>
+   </section>
+  </main>
+  <footer class="bg-gray-800 text-white p-4">
+   <div class="container mx-auto text-center">
+    <p>
+     © 2024 Secret Santa Virtual. All rights reserved.
+    </p>
+   </div>
+  </footer>
+  <script>
+   document.getElementById('menu-button').addEventListener('click', function() {
+     var menu = document.getElementById('mobile-menu');
+     if (menu.classList.contains('hidden')) {
+       menu.classList.remove('hidden');
+     } else {
+       menu.classList.add('hidden');
+     }
+   });
+
+   document.getElementById('contact-form').addEventListener('submit', function(event) {
+     event.preventDefault();
+     const name = document.getElementById('name').value;
+     const email = document.getElementById('email').value;
+     const message = document.getElementById('message').value;
+
+     // Simulate form submission
+     document.getElementById('response').innerText = 
+         `Thank you, ${name}! Your message has been received. We'll get back to you at ${email}.`;
+   });
+  </script>
+ </body>
+</html>

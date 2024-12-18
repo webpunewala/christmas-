@@ -1,0 +1,100 @@
+<html lang="en">
+ <head>
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   About Us
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-100 font-roboto">
+  <header class="bg-red-600 text-white p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+     <img alt="Santa Claus icon" class="h-10 w-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/KeRDBnrp7enC2kmAVuko4SQXVsuIDeoNpfT4YidJwpyTnawPB.jpg" width="40"/>
+     <h1 class="text-2xl font-bold">
+      Secret Santa
+     </h1>
+    </div>
+    <nav>
+     <ul class="hidden md:flex space-x-4">
+      <li>
+       <a class="hover:underline flex items-center" href="index.html">
+        <i class="fas fa-home mr-2">
+        </i>
+        Home
+       </a>
+      </li>
+     </ul>
+     <div class="md:hidden">
+      <button class="text-white focus:outline-none" id="menu-button">
+       <i class="fas fa-bars text-2xl">
+       </i>
+      </button>
+     </div>
+    </nav>
+   </div>
+   <div class="hidden md:hidden" id="mobile-menu">
+    <ul class="flex flex-col space-y-2 mt-2">
+     <li>
+      <a class="hover:underline flex items-center" href="index.html">
+       <i class="fas fa-home mr-2">
+       </i>
+       Home
+      </a>
+     </li>
+    </ul>
+   </div>
+  </header>
+  <main class="container mx-auto p-4">
+   <section class="bg-white p-6 rounded shadow my-8">
+    <h2 class="text-2xl font-bold mb-4">
+     Welcome to Secret Santa Virtual!
+    </h2>
+    <p class="mb-4">
+     At Secret Santa Virtual, we bring the joy of gift-giving to life, no matter where you are. Our platform is designed to connect friends, families, and colleagues in a fun and festive way, making your holiday season unforgettable.
+    </p>
+    <p class="mb-4">
+     Whether you're looking to organize a small gift exchange or a large group event, we make it easy to spread the holiday cheer. Our mission is to ensure everyone has a magical and stress-free experience.
+    </p>
+    <h3 class="text-xl font-bold mb-2">
+     Why Choose Us?
+    </h3>
+    <ul class="list-disc list-inside">
+     <li class="mb-2">
+      Easy to use and intuitive platform.
+     </li>
+     <li class="mb-2">
+      Secure and private matchmaking system.
+     </li>
+     <li class="mb-2">
+      Customizable gift options and group settings.
+     </li>
+     <li class="mb-2">
+      Accessible from anywhere in the world.
+     </li>
+    </ul>
+   </section>
+  </main>
+  <footer class="bg-gray-800 text-white p-4">
+   <div class="container mx-auto text-center">
+    <p>
+     © 2024 Secret Santa Virtual. All rights reserved.
+    </p>
+   </div>
+  </footer>
+  <script>
+   document.getElementById('menu-button').addEventListener('click', function() {
+     var menu = document.getElementById('mobile-menu');
+     if (menu.classList.contains('hidden')) {
+       menu.classList.remove('hidden');
+     } else {
+       menu.classList.add('hidden');
+     }
+   });
+  </script>
+ </body>
+</html>
